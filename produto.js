@@ -1,7 +1,20 @@
+const desc = document.getElementById("descricao");
+const quant = document.getElementById("quantidade");
+
+desc.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    quantidade.focus();
+  }
+});
+
 function calcular(){
     if(validaDescricao() && validaQuantidade() && validaUnitario()){
         let nTotal = quantidade.value * unitario.value;
+        console.log(quantidade.value)
+        console.log(unitario.value)
+        console.log(nTotal)
         total.value = nTotal;
+        
     }     
 }
 function validaDescricao(){
